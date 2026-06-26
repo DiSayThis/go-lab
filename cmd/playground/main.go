@@ -1,10 +1,10 @@
 package main
 
-import "fmt"
+import "net/http"
 
 func main() {
-	s := "привет"
-	fmt.Println(s)
-	fmt.Println(len(s))
-	fmt.Println(len([]rune(s)))
+	err := http.ListenAndServe(`:8080`, nil)
+	if err != nil {
+		panic(err)
+	}
 }
