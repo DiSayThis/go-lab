@@ -1,4 +1,4 @@
-package main
+package playground
 
 import (
 	"crypto/aes"
@@ -32,10 +32,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-}
-
-func sum[T int | float64 | float32](a, b T) T {
-	return a + b
 }
 
 type Encrypter struct {
